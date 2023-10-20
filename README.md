@@ -10,3 +10,6 @@ Deploy info from API-REST response
 
 https://restrepo.github.io/frontend/
 
+## Debug
+To check the `console.log` in the rendered page in the browser, in Chrome: right click on the page, select "Inspect" and check the corresponding "Console" tab
+
