@@ -17,11 +17,7 @@
 		.then(response => response.json())
 		.then(data => {
 			console.log(data.faculties[0]) <!-- This is to debug -->
-			<p>EXAMPLE: /?username=amedagli </p>
-			<p><b>Result:</b> </p>
-	                <p>			
-			document.querySelector("#debug").innerText = data.faculties[0].name + " " + data.faculties[0].lastname <!-- Get the name of the selected professor -->
-			</p>
+			"<p>EXAMPLE: /?username=amedagli </p>" + document.querySelector("#debug").innerText = data.faculties[0].name + " " + data.faculties[0].lastname <!-- Get the name of the selected professor -->
 		})
 	</script>
 </body>
