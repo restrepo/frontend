@@ -8,6 +8,8 @@
 	<p>and recheck the <b>result:</b></p>
 	<div id="debug"></div>
 	<script>
+		// **** BEGIN: Get the URL parameter: `username` ****
+		// https://www.sitepoint.com/get-url-parameters-with-javascript/
 		const queryString = window.location.search;
 		console.log(queryString);
 		// ?product=shirt&color=blue&newuser&size=m
@@ -15,6 +17,8 @@
 		const username = urlParams.get('username')
 		console.log(username);
 		// amedagli or cavila for example
+		// **** END: Get the URL parameter: `username`   ****
+		// Use an API-REST call to get the `data` for the url parameter `username`
 		fetch("https://academia.uniandes.edu.co/WebServicesAcademy/api/professors?username=" + username)
 		.then(response => response.json())
 		.then(data => {
