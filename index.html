@@ -6,6 +6,9 @@
 <body>
 	<div id="debug"></div>
 	<script>
+		const queryString = window.location.search;
+		console.log(queryString);
+		// ?product=shirt&color=blue&newuser&size=m
 		fetch("https://academia.uniandes.edu.co/WebServicesAcademy/api/professors?username=amedagli")
 		.then(response => response.json())
 		.then(data => {
