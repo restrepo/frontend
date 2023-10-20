@@ -12,12 +12,16 @@
 		const urlParams = new URLSearchParams(queryString);
 		const username = urlParams.get('username')
 		console.log(username);
-		// amedagli
+		// amedagli or cavila for example
 		fetch("https://academia.uniandes.edu.co/WebServicesAcademy/api/professors?username=" + username)
 		.then(response => response.json())
 		.then(data => {
 			console.log(data.faculties[0]) <!-- This is to debug -->
-			document.querySelector("#debug").innerText = data.faculties[0].name + " " + data.faculties[0].lastname + username <!-- Get the name of the selected professor -->
+			<p>EXAMPLE: /?username=amedagli </p>
+			<p><b>Result:</b> </p>
+	                <p>			
+			document.querySelector("#debug").innerText = data.faculties[0].name + " " + data.faculties[0].lastname <!-- Get the name of the selected professor -->
+			</p>
 		})
 	</script>
 </body>
