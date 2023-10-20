@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample page</title>
+</head>
+<body>
+	<div id="debug"></div>
+	<script>
+		fetch("https://academia.uniandes.edu.co/WebServicesAcademy/api/professors?username=amedagli")
+		.then(response => response.json())
+		.then(data => {
+			console.log(data.faculties[0]) <!-- This is to debug -->
+			document.querySelector("#debug").innerText = data.faculties[0].name + " " + data.faculties[0].lastname <!-- Get the name of the selected professor -->
+		})
+	</script>
+</body>
+</html>
