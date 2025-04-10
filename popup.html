@@ -25,7 +25,8 @@
 		.then(response => response.json())
 		.then(data => {
 			console.log(data.faculties[0]) <!-- This is to debug -->
-			document.querySelector("#debug").innerText = data.faculties[0].name + " " + data.faculties[0].lastname <!-- Get the name of the selected professor -->
+			document.querySelector("#debug").innerText = data.faculties[0].name + " " + data.faculties[0].lastname <!-- Get the name of the selected professor -->;
+			document.querySelector("#debug").innerHTML = "<a href='https://academia.uniandes.edu.co/WebServicesAcademy/api/professors?username='" + username + "> Full API output</a>" ;
 		})
 	</script>
 </body>
